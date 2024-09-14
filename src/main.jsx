@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <GoogleOAuthProvider clientId={clientId}>
     <React.StrictMode>
       <QueryClientProvider client={queryClient}>
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
           <GlobalStateProvider>
             <DevSupport ComponentPreviews={ComponentPreviews}
                         useInitialHook={useInitial}
