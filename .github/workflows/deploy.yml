@@ -16,6 +16,8 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Spécifiez la version de Node.js
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
@@ -47,3 +49,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          clean: true  # Supprime les anciens fichiers avant de déployer les nouveaux
