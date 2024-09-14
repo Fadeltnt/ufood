@@ -1,0 +1,72 @@
+.Page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../assets/loginbg.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  height: 100vh;
+}
+
+.Onclick {
+  padding-bottom: 2rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 1rem;
+  width:25%
+}
+
+.Onclick .OnclickHeader {
+  padding: 2rem;
+}
+
+.OnclickHeader .Title {
+  color: orange;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.Onclick .Content {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  flex-direction: column;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Onclick .Content .LoginWrapper {
+
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 1rem;
+  width: 50%;
+}
+
+
+.Name, .Username, .Password{
+  border: 1px solid grey;
+  background-color: black;
+  border-radius: 4px;
+  padding: 5%;
+}
+
+.Submit {
+  padding: 0.25rem;
+  background-color: orange;
+  width:100%;
+  border-radius:4px;
+}
+
+.Title {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

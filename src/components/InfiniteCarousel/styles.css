@@ -1,0 +1,399 @@
+@media all and (max-width: 800px) {
+  .App {
+    /* min-height: 30%; */
+  }
+}
+
+@media all and (max-width: 1100px) {
+  .App {
+    /* min-height: 30%; */
+  }
+}
+
+@media all and (max-width: 1400px) {
+  .App {
+    /* min-height: 30%; */
+  }
+}
+
+.App {
+  display: flex;
+  width: 100dvw;
+  align-items: center;
+  overflow-x: hidden;
+  /* border: 5px solid purple; */
+}
+
+.CarouselContainer {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 14dvh;
+  padding-top: 6dvh;
+  gap: 1rem;
+  /* border: 1px solid red; */
+}
+
+.Carousel {
+  display: flex;
+  width: 100dvw;
+  align-items: center;
+  position: relative;
+}
+
+.CarouselHeader {
+  width: 93.72%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  text-transform: capitalize;
+
+  gap: 15px;
+}
+
+.CarouselHeader .InfoWrapper,
+.CarouselHeader .Filtre {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.Title {
+  font-size: 1.7rem;
+  color: orange;
+  letter-spacing: 3px;
+  text-wrap: nowrap;
+}
+
+@media all and (max-width: 1100px) {
+  .Title {
+    font-size: 1.1rem;
+  }
+}
+
+.FPriceCurrent,
+.FRatingCurrent {
+  opacity: 0.1;
+}
+
+.CarouselContainer:hover .FPriceCurrent,
+.CarouselContainer:hover .FRatingCurrent {
+  opacity: 1;
+}
+
+.FPrice:hover {
+  width: 20.5rem;
+}
+
+.FRatingType,
+.FPriceType {
+  display: none;
+  gap: 1rem;
+}
+
+.FPrice:hover .FPriceType,
+.FRating:hover .FRatingType {
+  display: flex;
+}
+
+.FPrice:hover .FPriceCurrent,
+.FRating:hover .FRatingCurrent {
+  display: none;
+}
+
+.LeftSideOfCarousel,
+.RightSideOfCarousel {
+  /* width: 2.93%; */
+  position: absolute;
+  height: 100%;
+  z-index: 30;
+  top: 0;
+  border: 1px solid transparent;
+  background-color: rgb(0 0 0 / 0.3);
+  transition: background-color 250ms ease;
+  border-radius: 0.25rem;
+}
+
+.Carousel:hover .LeftSideOfCarousel,
+.Carousel:hover .RightSideOfCarousel {
+  background-color: rgb(0 0 0 / 0.5);
+}
+
+.sideArrow {
+  font-size: large;
+  font: bolder;
+  opacity: 0;
+  transition:
+    opacity 250ms ease,
+    transform 250ms ease;
+}
+
+.Carousel:hover .sideArrow {
+  opacity: 1;
+}
+
+.LeftSideOfCarousel:hover .sideArrow,
+.RightSideOfCarousel:hover .sideArrow {
+  transform: scale(1.7);
+}
+
+.LeftSideOfCarousel {
+  left: 0;
+}
+
+.RightSideOfCarousel {
+  right: 0;
+}
+
+.ImageSlider {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 93.72%;
+  gap: 0.42%;
+  margin-left: 0.21%;
+  margin-right: 0.21%;
+}
+
+.hideSlider {
+  visibility: hidden;
+}
+
+.ImageWrapper {
+  display: flex;
+  position: relative;
+  width: 500px;
+  border-radius: 6px;
+}
+
+.ImageWrapper:has(> .OnHover:hover) {
+  /* transform: scale(1.35); */
+}
+
+.OnHover a {
+  text-decoration: none;
+}
+
+.ImageWrapper .Vanish,
+.ImageWrapper .OnHover {
+  flex-direction: column;
+  display: flex;
+}
+
+.ImageWrapper .Vanish .VanishHeader {
+  border-radius: 0.25rem;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.ImageWrapper .Vanish .VanishHeader {
+  opacity: 1;
+}
+
+.ImageWrapper .Vanish .OnHoverFooter {
+  opacity: 0;
+}
+
+.ImageWrapper .OnHover {
+  position: absolute;
+  opacity: 0;
+
+  aspect-ratio: 16/9;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  inset: 0;
+  box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.ImageWrapper .OnHover.isActive {
+  opacity: 1;
+}
+
+.ImageWrapper .OnHover .OnHoverHeader {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ImageWrapper:hover .OnHover {
+  display: flex;
+  position: absolute;
+  opacity: 1;
+}
+
+.ImageWrapper:first-child:hover .OnHover {
+  transform: scale(1.35) translate(13.5%, -12%);
+}
+
+.ImageWrapper:last-child:hover .OnHover {
+  transform: scale(1.35) translate(-13.5%, -12%);
+}
+
+.ImageWrapper:hover .OnHoverHeader {
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.ImageWrapper:hover .OnHoverFooter {
+  width: 100%;
+  height: 51%;
+  background-color: #141414;
+  transition: all 250ms ease-in-out 200ms;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+/* @media all and (max-width: 2000px) {
+  .ImageWrapper {
+    width: 400px;
+  }
+} */
+
+.ImageWrapper:hover .Vanish,
+.ImageWrapper:hover .OnHover {
+  transition: all 250ms ease-in-out 200ms;
+}
+
+.ImageWrapper:hover .Vanish .VanishHeader {
+  transition: all 250ms ease-in-out 200ms;
+  opacity: 0;
+}
+
+.ImageWrapper:hover .OnHover {
+  opacity: 1;
+  z-index: 20;
+  transform: translateY(-18%) scale(1.35);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+.ImageWrapper:not(:hover) .OnHover .OnHoverFooter {
+  display: none;
+}
+
+.EmptyDiv {
+  display: flex;
+  position: relative;
+  width: 500px;
+  opacity: 0;
+}
+
+.ImageSlider.infiniteScroll {
+  transition: none;
+  transform: translateX(3.41%);
+}
+
+.OnHoverFooter {
+  display: flex;
+  flex-direction: column;
+}
+
+.OnHoverFooter .Name {
+  padding-top: 5px;
+  letter-spacing: 3px;
+}
+
+.OnHoverFooter .Name,
+.OnHoverFooter .Distance {
+  margin-left: 1rem;
+  font: thin;
+  font-weight: 300;
+  font-size: 1em;
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+
+@media all and (max-width: 2000px) {
+  .OnHoverFooter .Name,
+  .OnHoverFooter .Distance {
+    font-size: 0.7rem;
+  }
+}
+
+@media all and (max-width: 1800px) {
+  .OnHoverFooter .Name,
+  .OnHoverFooter .Distance,
+  .OnHoverFooter .Buttons {
+    font-size: 0.5em;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .OnHoverFooter .Name,
+  .OnHoverFooter .Distance,
+  .OnHoverFooter .Buttons {
+    font-size: 0.3em;
+  }
+}
+
+.OnHoverFooter .Buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-right: 1rem;
+  margin-top: 0.4rem;
+  z-index: 1;
+}
+
+.OnHoverFooter .Buttons .Like,
+.OnHoverFooter .Buttons .Add,
+.OnHoverFooter .Buttons .Bookmark {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  width: 2em;
+  height: 2rem;
+  justify-content: center;
+  opacity: 1;
+}
+
+.OnHoverFooter .Buttons .Like:hover,
+.OnHoverFooter .Buttons .Add:hover,
+.OnHoverFooter .Buttons .Bookmark:hover {
+  border: 1px solid rgba(255, 165, 0, 1);
+}
+
+.progress_bar {
+  display: flex;
+  gap: 0.25rem;
+  justify-content: flex-start;
+  padding-bottom: 0.5rem;
+  opacity: 0;
+  transition: opacity 250ms ease;
+  flex-wrap: wrap;
+}
+
+.progress_item {
+  flex: 0 0 0.75rem;
+  min-width: 0.85rem;
+  min-height: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  align-self: flex-end;
+  flex-direction: row;
+  opacity: 0.3;
+  transition: opacity 250ms ease;
+}
+.CarouselContainer:hover .progress_bar,
+.progress_item.item_active {
+  opacity: 1;
+}
+
+div#Description {
+  margin-top: 15px;
+  z-index: 0;
+}
+
+.OnHover.isActive div#Description,
+.OnHover.isActive .review-button {
+  display: none;
+}
+
+.Buttons {
+  width: 100%;
+}

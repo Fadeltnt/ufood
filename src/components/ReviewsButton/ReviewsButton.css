@@ -1,0 +1,26 @@
+.review-button {
+  z-index: 10;
+}
+
+.review-button.home {
+  transform: scale(0.5);
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.reviewContainer {
+  position: relative;
+}
+
+.review-button .btn-primary {
+  background-color: orange;
+  border-color: orange;
+  color: white;
+}
+
+.review-button .btn-primary:hover {
+  background-color: darkorange;
+  border-color: darkorange;
+}

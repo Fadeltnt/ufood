@@ -1,0 +1,17 @@
+.favorite {
+  width: 60px;
+  height: 60px;
+  border: none;
+  background: brown;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #ccc;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.selected {
+  background-color: orange !important;
+  color: white !important;
+}

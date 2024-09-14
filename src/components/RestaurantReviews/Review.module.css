@@ -1,0 +1,25 @@
+.reviewContainer {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .reviewHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .reviewDate,
+  .reviewRating {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: black;
+  }
+  
+  .reviewComment {
+    margin-top: 5px;
+    color: black;
+  }

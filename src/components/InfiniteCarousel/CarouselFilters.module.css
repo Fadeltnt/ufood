@@ -1,0 +1,32 @@
+.filterType {
+  border: 3px solid orange;
+  border-radius: 0.5rem;
+  color: white;
+  width: 4.2rem;
+}
+
+.filterType > button {
+  color: white;
+  padding: 0;
+  font-size: 0.855rem;
+  padding: 0.1rem;
+  height: 100%;
+}
+
+.carouselFilters {
+  display: flex;
+  align-items: column;
+  gap: 10px;
+}
+
+.orderFilter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.selected {
+  background-color: orange !important;
+  color: white !important;
+}

@@ -1,0 +1,247 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --handle-size: 3rem;
+  --img-gap: 0.25rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.container {
+  display: flex;
+  overflow-x: hidden;
+  order: 2;
+  flex-direction: row;
+}
+
+.slider {
+  display: flex;
+  margin: 0 var(--img-gap);
+  transition: transform 250ms ease-in-out;
+}
+
+.sliderimage {
+  display: flex;
+  align-items: flex-start;
+}
+
+.sliderimage > img {
+  aspect-ratio: 16 / 9;
+  padding: var(--img-gap);
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.handle {
+  visibility: hidden;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  z-index: 10;
+  margin: var(--img-gap) 0;
+  width: var(--handle-size);
+  cursor: pointer;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  line-height: 0;
+  background-color: rgb(0 0 0 / 0);
+  transition: background-color 250ms ease, opacity 250ms ease;
+}
+
+.left_handle {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.right_handle {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.handle:hover {
+  opacity: 1;
+  background: rgb(0 0 0 / 0.3);
+}
+
+.hidehandle,
+.hidehandle > .text {
+  visibility: hidden;
+}
+
+.hidehandle {
+  cursor: auto;
+  transition: none;
+}
+
+.hidehandle:hover {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.text {
+  font-size: large;
+  font: bolder;
+  transition: transform 250ms ease;
+  transform: scale(1);
+}
+
+.handle:hover .text {
+  transform: scale(2.3);
+}
+
+.header {
+  display: flex;
+  padding: 0.5rem calc(var(--img-gap) * 2 + var(--handle-size));
+  margin-top: 3rem;
+  order: 1;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 0;
+  text-wrap: nowrap;
+}
+
+.progress_bar {
+  visibility: hidden;
+  display: flex;
+  gap: 0.25rem;
+  justify-content: flex-end;
+}
+
+.container:hover + .header > .progress_bar {
+  visibility: visible;
+}
+
+.container:hover > .handle {
+  visibility: visible;
+}
+
+.progress_item {
+  flex: 0 0 0.75rem;
+  min-width: 0.75rem;
+  height: 0.15rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  align-self: flex-end;
+}
+
+.progress_item.active {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 420px) {
+  .progress_bar {
+    display: none;
+    max-width: 0px;
+  }
+
+  .sliderimage {
+    max-width: 239px;
+  }
+
+  .sliderimage > img {
+    max-width: 116px;
+    max-height: 65px;
+  }
+
+  .progress_item {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+  }
+  .header > .title {
+    font-size: medium;
+  }
+
+  .progress_bar {
+    display: flex;
+    overflow: hidden;
+    justify-content: flex-end;
+    flex-wrap: wrap-reverse;
+  }
+
+  .sliderimage > img {
+    aspect-ratio: 16 / 9;
+    padding: var(--img-gap);
+    border-radius: 1rem;
+    object-fit: cover;
+  }
+}
+
+/* ################### BorderTools ################### */
+
+/* .row {
+  border: 3px dashed blue;
+} */
+
+/* .container {
+  border: 1px dashed orange;
+} */
+
+/* .slider {
+  border: 5px solid white;
+} */
+
+/* .slider > .sliderimage {
+  border: 3px solid lightcoral;
+} */
+
+/* .slider > img {
+  border: 1px solid limegreen;
+} */
+
+.handle {
+  /* # Bydefault # border: 1px solid transparent; # By default #*/
+
+  /* border: 3px solid purple; */
+}
+
+/* .text {
+  border: 3px solid burlywood;
+} */
+
+/* .header {
+  border: 1px dashed red;
+} */
+
+/* .title {
+  border: 1px solid yellow;
+} */
+
+/* .progress_bar {
+  border: 3px solid turquoise;
+} */
+
+/* .progress_item {
+  border: 1px solid goldenrod;
+} */
+
+/* ###### Note ######## */
+
+/* 
+
+
+
+
+
+
+
+
+*/

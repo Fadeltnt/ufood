@@ -1,0 +1,51 @@
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+  display: flex;
+  z-index: 1;
+}
+
+.cluster-icon {
+  background-color: #333;
+  height: 2em;
+  width: 2em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  box-shadow: 0 0 0px 5px #fff;
+}
+
+.map-title {
+  color: black;
+  backdrop-filter: blur(7px);
+  font-weight: bold;
+  padding: 0.25rem;
+  border: 1px solid grey;
+  border-radius: 6px;
+  display: flex;
+  transform: translate(100%, -250%);
+}
+
+.leaflet-routing-alt {
+  color: #888;
+}
+
+.itineraireButton,
+.map-itineraire-non-dispo {
+  color: white;
+  backdrop-filter: blur(7px);
+  font-weight: bold;
+  padding: 0.25rem;
+  border: 1px solid black;
+  display: flex;
+  background-color: grey;
+  border-radius: 6px;
+}
+
+.map-itineraire-non-dispo {
+  background-color: red;
+}
